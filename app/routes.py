@@ -14,5 +14,5 @@ def profile():
     return render_template('projects.html')
 
 @app.route("/writing")
-def library():
+def writing():
     return render_template('writing.html')
