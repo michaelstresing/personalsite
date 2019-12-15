@@ -1,12 +1,12 @@
 from flask import Flask
 from .config import ProductionConfig, DevelopmentConfig
 
-app = Flask(__name__, instance_relative_config=False)
+app = Flask(__name__, instance_relative_config=True)
 
 def create_app():
 
     # Construct the core application.
-    app.config.from_object(DevelopmentConfig)
+    app.config.from_object(ProductionConfig)
     
     with app.app_context():
 
