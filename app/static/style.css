@@ -12,6 +12,12 @@ h1, h2{
   background: transparent;
 }
 
+.title{
+  position: absolute;
+  top: calc(10vh);
+  color: white;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -107,6 +113,7 @@ a:link {
   grid-area: 2 / 2 / 6 / 6;
   color: white;
   display: block;
+  align-items: center;
 }
 
 #profpic {
@@ -118,12 +125,17 @@ a:link {
 }
 
 .enter {
-  font-size: 150px;
-  transform: rotate(45deg);
+  font-size: 60px;
   position: absolute;
-  top: calc(50vh - 75px);
-  left: calc(50vw - 75px);
+  top: calc(85vh - 30px);
+  left: calc(50vw - 30px);
   background-color: transparent;
+}
+
+.main_page_wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project-card {
