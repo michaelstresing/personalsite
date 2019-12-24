@@ -1,8 +1,15 @@
+:root {
+  --bg-color: #0B1E00;
+  --primary-green: #747261;
+  --secondary-green: #abd870;
+  --highlight: #F0C5FF;
+}
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background-color: #0B1E00;
+    background-color: var(--bg-color);
     font-family: monospace;
 }
 
@@ -68,7 +75,7 @@ h1, h2{
 }
 
 .cv {
-  border: 1px #F0C5FF solid;
+  border: 1px var(--secondary-green) solid;
   border-radius: 5px; 
 }
 
@@ -89,25 +96,31 @@ h1, h2{
   padding-top: 5px;
 }
 
-a:link {
-    text-decoration: none;
-    color: #747261;
-  }
-  
-  a:visited {
-    text-decoration: none;
-    color: #747261;
-  }
+.icon:link, .topitem:link, a:link{
+  text-decoration: none;
+  color: var(--primary-green);
+}
 
-  a:hover {
-    text-decoration: none;
-    color: rgb(171, 216, 112);
-  }
-  
-  a:active {
-    text-decoration: none;
-    color: #272A23;
-  }
+.icon:visited, .topitem:visited, a:visited{
+  text-decoration: none;
+  color: var(--primary-green);
+}
+
+.icon:hover {
+  text-decoration: none;
+  color: var(--secondary-green);
+  font-size: 23px;
+}
+
+.topitem:hover, a:hover {
+  text-decoration: none;
+  color: var(--highlight);
+}
+
+.icon:active, .topitem:active, a:active {
+  text-decoration: none;
+  color: var(--primary-green);
+}
 
 .content {
   grid-area: 2 / 2 / 6 / 6;
@@ -118,8 +131,8 @@ a:link {
 }
 
 #profpic {
-  height: 200px;
-  width: 300px;
+  height: 300px;
+  width: 450px;
   float: left;
   border-radius: 5px;
   margin: 10px 40px;
@@ -141,7 +154,7 @@ a:link {
 
 .project-card {
   margin: 5px;
-  border: solid #747261 1px;
+  border: solid var(--primary-green) 1px;
   border-radius: 10px;
   padding: 10px;
   text-align: left;
@@ -162,9 +175,14 @@ a:link {
 .project_tech {
   font-size: 12px;
   padding-bottom: 5px;
-  color: #F0C5FF;
+  color: var(--secondary-green);
 }
 
 .description {
   padding: 20px;
+}
+
+#activepage {
+  text-decoration: underline; 
+  color: var(--highlight);
 }
